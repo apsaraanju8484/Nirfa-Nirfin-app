@@ -1,0 +1,56 @@
+
+<h4 class="text-center mt-3">Login Details {{loginDate | date : 'short'}}</h4>
+
+
+<div class="container mt-5">
+ <div class="row">
+ <div class="col ">
+  <h1 class="text-primary">NIRFA NIRFIN MANAGMENT APPLICATION
+
+   <a routerLink="/contacts/add" class="btn btn-primary"><div class="i fa fa-user-plus"></div>&nbsp;&nbsp;&nbsp; Add New
+   </a>
+  </h1>
+  <p style="text-align: justify;" class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, adipisci culpa reiciendis tenetur dolorem iure quod earum mollitia perferendis ducimus, amet, vitae accusantium! Officia illum mollitia iusto maiores obcaecati hic. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem dicta sapiente illum assumenda debitis laudantium molestiae eveniet neque odio ad qui vero quos nihil accusantium nam consectetur, natus voluptatum. Voluptates.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, adipisci culpa reiciendis tenetur dolorem iure quod earum mollitia perferendis ducimus, amet, vitae accusantium! Officia illum mollitia iusto maiores obcaecati hic. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem dicta sapiente illum assumenda debitis laudantium molestiae eveniet neque odio ad qui vero quos nihil accusantium nam consectetur, natus voluptatum. Voluptates.</p>
+
+
+  <form class="d-flex w-50" role="search">
+   <input (keyup)="search($event)" class="form-control me-2 mt-3" type="search" placeholder="Search" aria-label="Search">
+   <!-- <button class="btn btn-outline-primary" type="submit">Search</button> -->
+ </form>
+
+<!-- <pre>
+  {{allContacts | json}}</pre> --> 
+
+
+ <div class="container mt-3">
+  <div class="row">
+   <div class="col-md-6 mt-4" *ngFor="let contact of allContacts | filter : searchKey : 'name'">
+    <div class="card list-group-item-secondary">
+     <div class="card-body">
+      <div class="row">
+      <div class="col-md-4">
+       <img [src]="contact.photo" alt="" height="170px" class="w-100">
+      </div>
+
+      <div class="col-md-7 my-auto">
+       <ul class="list-group">
+        <li class="list-group-item">Name : <span>{{contact.name}}</span> </li>
+        <li class="list-group-item">Email : <span>{{contact.email}}</span> </li>
+        <li class="list-group-item">Mobile : <span>{{contact.mobile}}</span> </li>
+       
+      </ul>
+      </div>
+      <div class="col-md-1 d-flex flex-column justify-content-center align-items-center">
+       <a routerLink="/contacts/view/{{contact.id}}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
+       <a routerLink="/contacts/update/{{contact.id}}" class="btn btn-primary mt-1"><i class="fa-solid fa-pen"></i></a>
+<button class="btn btn-primary mt-1"><i class="fa-solid fa-trash"></i></button>
+      </div>
+     </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ </div>
+ </div>
+</div>
