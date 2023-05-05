@@ -69,16 +69,6 @@
       "company": "Johns Group",
       "title": "Data Analyst",
       "groupId": "3"
-    },
-    {
-      "id": "ca8",
-      "name": "Nicholas Runolfsdottir V",
-      "email": "Sherwood@rosamond.me",
-      "photo": "https://qph.fs.quoracdn.net/main-qimg-db4e696e7c0905ee34f311d49135e607",
-      "mobile": "9876543218",
-      "company": "Abernathy Group",
-      "title": "Developer",
-      "groupId": "4"
     }
   ],
   "groups": [
